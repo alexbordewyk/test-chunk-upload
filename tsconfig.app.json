@@ -3,7 +3,15 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "./out-tsc/app",
-    "types": []
+    "types": ["crypto-js"],
+    "paths": {
+      "crypto": [
+        "./node_modules/crypto-browserify"
+      ],
+      "stream": [
+        "./node_modules/stream-browserify"
+      ]
+    }
   },
   "files": [
     "src/main.ts",
@@ -11,5 +19,8 @@
   ],
   "include": [
     "src/**/*.d.ts"
+  ],
+  "exclude": [
+    "node_modules/resumablejs/resumable.d.ts"
   ]
 }
