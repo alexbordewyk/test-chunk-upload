@@ -263,6 +263,8 @@ declare namespace resumablejs {
 
     getOpt(o: string): any;
 
+    uploadSession: any;
+
     // Events
     /**
      * Listen for event from Resumable.js (see below)
