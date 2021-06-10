@@ -1,0 +1,16 @@
+<mat-card>
+  <mat-card-title>Upload Files</mat-card-title>
+
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item *ngFor="let uploaderFile$ of uploaderFiles">
+        <app-uploader-file *ngIf="uploaderFile$ | async as uploaderFile" [uploaderFile]="uploaderFile"></app-uploader-file>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <input multiple type="file" hidden="true" (change)="onFileSelected($event)" #fileUpload>
+    <button mat-raised-button color="primary" (click)="fileUpload.click()">Browse</button>
+  </mat-card-actions>
+</mat-card>

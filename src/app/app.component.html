@@ -1,10 +1,1 @@
-<input type="file" class="file-input"
-       (change)="onFileSelected($event)" #fileUpload>
-
-<div class="file-upload">
-
-  {{fileName || "No file uploaded yet."}}
-  {{ fileProgress }}
-
-  <button (click)="fileUpload.click()"></button>
-</div>
+<app-uploader></app-uploader>

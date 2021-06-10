@@ -38,7 +38,6 @@ export class UploadService {
       headers: (resumableFile: resumablejs.ResumableFile, resumableChunk: resumablejs.ResumableChunk) =>
         createChunkHeaders(resumableFile, resumableChunk, this.authToken),
       preprocess: (resumableChunk: resumablejs.ResumableChunk) => preprocessChunk(resumableChunk),
-      uploadSession: uploadSession
     })
   }
 
